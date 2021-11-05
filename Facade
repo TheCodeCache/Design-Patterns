@@ -53,3 +53,32 @@ general points:
     4. It hides the complexities of the system ad provides an interface to the client using which the client can access the system.
     5. This pattern falls under structural pattern, bcoz this pattern adds an interface to existing sytem to hide its complexities.
     6. It provides simplified methods required by the client and delegates calls to methods of existing system classes.
+    7. Facade layer should not be forced and its always optional.
+    8. We can always expose the subsytem directly through Facade, but that would be against the best practice, as the resultant code will look ugly
+    9. Subsystems are not aware of the existence of facade. Only facade talks to the subsystems. it's unidirectional from Facade to its underlying subsystems.
+    10. Subsystem may be dependent with one another. In such case, facade can act as a coordinator and decouple the dependencies between the subsystems.
+    11. Translating data to suit the interface of a subsystem is done by the facade
+    12. Facade design pattern is used for promoting subsystem independence and portability
+    13. Facade provides a single interface
+
+    
+Common Mistakes People do while implementing Facade Pattern:
+
+    1. just for the sake of introducing a facade layer developers tend to create additional classes. 
+        Layered architecture is good but assess the need for every layer. Just naming a class as ABCDFacade.java doesn’r really make it a facade.
+    2. Creating a java class and ‘forcing’ the UI to interact with other layers through it and calling it a facade layer is one more popular mistake. 
+        Facade layer should not be forced and its always optional. 
+        If the client wishes to interact with components directly it should be allowed to bypass the facade layer.
+    3. Methods in facade layer has only one or two lines which calls the other components. 
+        If facade is going to be so simple it invalidates its purpose and clients can directly do that by themselves.
+    4. A controller is not a facade.
+    5. Facade is ‘not’ a layer that imposes security and hides important data and implementation.
+    6. Don’t create a facade layer in advance. 
+        If you feel that in future the subsystem is going to evolve and become complicated to defend that do not create a stub class and name it a facade. 
+        After the subsystem has become complex you can implement the facade design pattern.
+    7. Subsystems are not aware of facade and there should be no reference for facade in subsystems.
+
+Reference(s):
+- https://javapapers.com/design-patterns/facade-design-pattern/
+- https://www.opencodez.com/java/facade-pattern.htm
+
