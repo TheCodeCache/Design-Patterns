@@ -35,16 +35,18 @@ Another example:
     
     For Ex: "ScalaCache" is the "Facade" for many such caching solutions, It's easy to switch b/w these caching solutions, and the APIs are quite simple to use
     
-Code:
-Example (1) - 
+Code: (checked in to this repo)
+three examples:
+1. AnimalFacade.java
+2. ShapeFacade.java
+3. Computer.java
+4. Food.java
 
-
-
-
-Pros n Cons:
 
 Facade vs Abstraction:
     The relationship between the two: The Facade pattern is a subset of "layers of abstraction". A Facade is an added level of abstraction. Not all abstractions are Facades.
+    The facade pattern is an simplified interface to a larger, possibly more complex code base. The code base may be a single class, or more. The facade just gives you a simple interface to it.
+    Abstraction, is used to represent a concept, but not to be bound to any specific instance. (Ie: An abstract class). This doesn't imply simplifying (like the facade pattern does), but rather making a 'common' interface or representation.
 
 general points:
     1. A facade can be created just out of a single class as well, provided the given single class is too complex to use it.
@@ -53,3 +55,36 @@ general points:
     4. It hides the complexities of the system ad provides an interface to the client using which the client can access the system.
     5. This pattern falls under structural pattern, bcoz this pattern adds an interface to existing sytem to hide its complexities.
     6. It provides simplified methods required by the client and delegates calls to methods of existing system classes.
+    7. Facade layer should not be forced and its always optional.
+    8. We can always expose the subsytem directly through Facade, but that would be against the best practice, as the resultant code will look ugly
+    9. Subsystems are not aware of the existence of facade. Only facade talks to the subsystems. it's unidirectional from Facade to its underlying subsystems.
+    10. Subsystem may be dependent with one another. In such case, facade can act as a coordinator and decouple the dependencies between the subsystems.
+    11. Translating data to suit the interface of a subsystem is done by the facade
+    12. Facade design pattern is used for promoting subsystem independence and portability
+    13. Facade provides a single interface
+    14. GoF Definition: Provide a unified interface to a set of interfaces in a subsystem. 
+        Facade Pattern defines a higher-level interface that makes the subsystem easier to use.
+
+    
+Common Mistakes People do while implementing Facade Pattern:
+
+    1. just for the sake of introducing a facade layer developers tend to create additional classes. 
+        Layered architecture is good but assess the need for every layer. Just naming a class as ABCDFacade.java doesn’r really make it a facade.
+    2. Creating a java class and ‘forcing’ the UI to interact with other layers through it and calling it a facade layer is one more popular mistake. 
+        Facade layer should not be forced and its always optional. 
+        If the client wishes to interact with components directly it should be allowed to bypass the facade layer.
+    3. Methods in facade layer has only one or two lines which calls the other components. 
+        If facade is going to be so simple it invalidates its purpose and clients can directly do that by themselves.
+    4. A controller is not a facade.
+    5. Facade is ‘not’ a layer that imposes security and hides important data and implementation.
+    6. Don’t create a facade layer in advance. 
+        If you feel that in future the subsystem is going to evolve and become complicated to defend that do not create a stub class and name it a facade. 
+        After the subsystem has become complex you can implement the facade design pattern.
+    7. Subsystems are not aware of facade and there should be no reference for facade in subsystems.
+
+Reference(s):
+- https://en.wikipedia.org/wiki/Facade_pattern
+- https://javapapers.com/design-patterns/facade-design-pattern/
+- https://www.opencodez.com/java/facade-pattern.htm
+- https://stackoverflow.com/a/2288682
+
