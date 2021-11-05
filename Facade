@@ -35,16 +35,18 @@ Another example:
     
     For Ex: "ScalaCache" is the "Facade" for many such caching solutions, It's easy to switch b/w these caching solutions, and the APIs are quite simple to use
     
-Code:
-Example (1) - 
+Code: (checked in to this repo)
+three examples:
+1. AnimalFacade.java
+2. ShapeFacade.java
+3. Computer.java
+4. Food.java
 
-
-
-
-Pros n Cons:
 
 Facade vs Abstraction:
     The relationship between the two: The Facade pattern is a subset of "layers of abstraction". A Facade is an added level of abstraction. Not all abstractions are Facades.
+    The facade pattern is an simplified interface to a larger, possibly more complex code base. The code base may be a single class, or more. The facade just gives you a simple interface to it.
+    Abstraction, is used to represent a concept, but not to be bound to any specific instance. (Ie: An abstract class). This doesn't imply simplifying (like the facade pattern does), but rather making a 'common' interface or representation.
 
 general points:
     1. A facade can be created just out of a single class as well, provided the given single class is too complex to use it.
@@ -60,6 +62,8 @@ general points:
     11. Translating data to suit the interface of a subsystem is done by the facade
     12. Facade design pattern is used for promoting subsystem independence and portability
     13. Facade provides a single interface
+    14. GoF Definition: Provide a unified interface to a set of interfaces in a subsystem. 
+        Facade Pattern defines a higher-level interface that makes the subsystem easier to use.
 
     
 Common Mistakes People do while implementing Facade Pattern:
@@ -79,6 +83,8 @@ Common Mistakes People do while implementing Facade Pattern:
     7. Subsystems are not aware of facade and there should be no reference for facade in subsystems.
 
 Reference(s):
+- https://en.wikipedia.org/wiki/Facade_pattern
 - https://javapapers.com/design-patterns/facade-design-pattern/
 - https://www.opencodez.com/java/facade-pattern.htm
+- https://stackoverflow.com/a/2288682
 
