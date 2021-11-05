@@ -45,8 +45,12 @@ Code: (https://github.com/TheCodeCache/Design-Patterns/tree/master/code)
 
 Facade vs Abstraction:
     The relationship between the two: The Facade pattern is a subset of "layers of abstraction". A Facade is an added level of abstraction. Not all abstractions are Facades.
-    The facade pattern is an simplified interface to a larger, possibly more complex code base. The code base may be a single class, or more. The facade just gives you a simple interface to it.
-    Abstraction, is used to represent a concept, but not to be bound to any specific instance. (Ie: An abstract class). This doesn't imply simplifying (like the facade pattern does), but rather making a 'common' interface or representation.
+    The facade pattern is an simplified interface to a larger, possibly more complex code base. 
+        The code base may be a single class, or more. The facade just gives you a simple interface to it.
+    Abstraction, is used to represent a concept, but not to be bound to any specific instance. (Ie: An abstract class). 
+        This doesn't imply simplifying (like the facade pattern does), but rather making a 'common' interface or representation.
+    If you are simply forwarding one call to another class with the same interface, that is more accurately the Proxy pattern. 
+        This is another type of abstraction layer.
 
 general points:
     1. A facade can be created just out of a single class as well, provided the given single class is too complex to use it.
