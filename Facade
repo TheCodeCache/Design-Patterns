@@ -35,12 +35,12 @@ Another example:
     
     For Ex: "ScalaCache" is the "Facade" for many such caching solutions, It's easy to switch b/w these caching solutions, and the APIs are quite simple to use
     
-Code: (checked in to this repo)
-three examples:
-1. AnimalFacade.java
-2. ShapeFacade.java
-3. Computer.java
-4. Food.java
+Code: (https://github.com/TheCodeCache/Design-Patterns/tree/master/code)
+    PFB 3 examples:
+    1. AnimalFacade.java
+    2. ShapeFacade.java
+    3. Computer.java
+    4. Food.java
 
 
 Facade vs Abstraction:
