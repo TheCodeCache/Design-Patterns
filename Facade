@@ -1,0 +1,55 @@
+It's classified as a structural design pattern.
+
+"The idea is to make a complex system or subsystem or a set of subsystems easier to use" - Facade
+
+The Problem:
+
+1. Imagine, you enter an IT company main-gate and there is no reception counter. How would you feel? Can you sense a number of problems can appear?
+    For ex: how would you move across the company's internal departments (HR, Engineering, RnD, Finance, Sales etc.),
+    
+    this is precisely the problem that is addressed through Facade Pattern
+2. Imagine, you enter a bank and there is no reception counter again. How would go about knowing things, like where to collect the deposit form, or which is the loan counter,
+    or where to submit the withdrawl form etc.
+    
+    this is precisely the problem that is addressed through Facade Pattern
+    
+Another problem:
+    Suppose you are in an restaurant, but there is no menu, and no waiter, can you imagine the situation?
+        this is exactly the problem that the Facade pattern tries to address,
+        
+    In this case, the menu acts the Facade between you and the food making & servicing sub-system,
+    As a customer, we should not be worried about who cuts the veggies, who cooks the meal, what ingredients they use etc. 
+    or even which of the many waiter serves you on the plate, you do not care about that, right! 
+    all you need is a menu where you can just choose what to eat, and place order, and you are done!
+    
+    This is exactly the situation, where Facade pattern helps to resolve
+    
+Another example:
+
+    We've got multiple caching solutions for ex: MemCache, Redis, etc. 
+    and there functioning could be completely different and complex, and as an user you want to frequently switch b/w these solutions as per the need,
+    
+    in this case, your actual business logic will be mixed up with the initialization and invocation of these several different caching services,
+    
+    this is where, the Facade pattern comes to the rescue. it simplifies things up and provides an easy to interface by encapsulating several components and exposing simple APIs
+    
+    For Ex: "ScalaCache" is the "Facade" for many such caching solutions, It's easy to switch b/w these caching solutions, and the APIs are quite simple to use
+    
+Code:
+Example (1) - 
+
+
+
+
+Pros n Cons:
+
+Facade vs Abstraction:
+    The relationship between the two: The Facade pattern is a subset of "layers of abstraction". A Facade is an added level of abstraction. Not all abstractions are Facades.
+
+general points:
+    1. A facade can be created just out of a single class as well, provided the given single class is too complex to use it.
+    2. Facade can be created for a group of co-related subsytems and provides a simple interface or expose set of simple APIs to the end user to use
+    3. It, just like proxy pattern, is a subset of 'Abstraction' concept
+    4. It hides the complexities of the system ad provides an interface to the client using which the client can access the system.
+    5. This pattern falls under structural pattern, bcoz this pattern adds an interface to existing sytem to hide its complexities.
+    6. It provides simplified methods required by the client and delegates calls to methods of existing system classes.
