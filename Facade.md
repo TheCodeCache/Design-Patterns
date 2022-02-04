@@ -3,6 +3,8 @@
 The best way to understand or getting a true feeling of what and how a `Facade` looks like,  
 could be to just review/go through the following `HomeFacade.java` class  
 
+`Facade hides the minor details and provide a simpler interface`  
+
 `HomeFacade.java`  
 ```java
 package com.design.pattern.facade;
@@ -26,9 +28,13 @@ import com.design.pattern.facade.devices.livingroom.LivingRoomTV;
 
 /**
  * This is how a Facade looks like - 
- *
- * It basically provides a simplified interface to client
- * It is generally implemented for a single component or a group components that evolve to become very complex over the period of time.
+ * 
+ * Facade hides the minor details and provide a simpler interface
+ * 
+ * It basically provides a simplified interface to client as per client's specific needs, 
+ *   if the need changes, a new facade has to be introduced
+ * It is generally implemented for a single component or a group components, 
+ *   that evolve to become very complex over the period of time.
  * It should never be implemented in the beginning of s/w development, 
  *   as it's not needed at that point in time, because all the components/subsytem are generally simple in nature.
  */
@@ -131,7 +137,12 @@ public class HomeFacade {
    After the subsystem has become complex you can implement the facade design pattern.
 7. Subsystems are not aware of facade and there should be no reference for facade in subsystems.
 
-**Reference:**  
+![image](https://user-images.githubusercontent.com/26399543/152584295-692446c3-02eb-41ef-82a6-77f21596a14a.png)
+
+![image](https://user-images.githubusercontent.com/26399543/152584324-85886474-16f0-4189-ab1f-1bca8b053b49.png)
+
+
+**Reference(s):**  
 1. DZone
 2. Other random sources
 
