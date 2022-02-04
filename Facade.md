@@ -137,9 +137,11 @@ public class HomeFacade {
    After the subsystem has become complex you can implement the facade design pattern.
 7. Subsystems are not aware of facade and there should be no reference for facade in subsystems.
 
-![image](https://user-images.githubusercontent.com/26399543/152584295-692446c3-02eb-41ef-82a6-77f21596a14a.png)
+Type-1:  
+<img src="https://user-images.githubusercontent.com/26399543/152584295-692446c3-02eb-41ef-82a6-77f21596a14a.png" width="80%" height="80%">
 
-![image](https://user-images.githubusercontent.com/26399543/152584324-85886474-16f0-4189-ab1f-1bca8b053b49.png)
+Type-2:  
+<img src="https://user-images.githubusercontent.com/26399543/152584324-85886474-16f0-4189-ab1f-1bca8b053b49.png" width="80%" height="80%">
 
 **Comparison:**  
 1. With **Mediator** - 
