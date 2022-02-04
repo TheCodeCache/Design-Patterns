@@ -141,6 +141,22 @@ public class HomeFacade {
 
 ![image](https://user-images.githubusercontent.com/26399543/152584324-85886474-16f0-4189-ab1f-1bca8b053b49.png)
 
+**Comparison:**  
+1. With **Mediator** - 
+- `Facade Pattern` defines the simplifies interface to a complex system.
+- `Mediator Pattern` provides a central communication point between components of a system.
+2. With **Flyweight** - 
+- `Flyweight Pattern` creates smaller reusable objects for the system.
+- `Facade Pattern` creates single bigger objects to deal with the entire system.
+3. With **Proxy** - 
+- `Proxy Pattern` is similar to `Facade` except,  
+   it provides same interface as it's service object to make complex objects interchangeable.
+4. With **Abstract Factory** - 
+- `Abstract Factory` is like Facade except it only handles the creation part of objects of the system/subsystem.  
+- `Facade` handles system's objects operational part as well.  
+5. With **Singleton** - 
+- `Facade Object` normally we create as `Singleton` while implement since it serves for its purpose. 
+
 
 **Reference(s):**  
 1. DZone
