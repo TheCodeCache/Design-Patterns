@@ -4,8 +4,7 @@ Thought process -
 
 "Many algorithms can be decomposed into higher and lower level parts.
 
-For ex: let us consider the process of making a tea.
-**process of making a tea:**  
+**Example-1 : Process of making a tea** -   
 
 The process of making a tea can be decomposed into something high level,  
 like the process of making hot beverages (boil water, pour into cup)  
@@ -21,3 +20,4 @@ So, the high level algorithm (the process of boiling water, pouring into cup) ca
 So, the tea specific things are specific, but everything else can be reused for making something else,  
 like coffee or hot chocolate, for example.  
 
+**Example-2 : Payment System** -  
