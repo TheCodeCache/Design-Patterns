@@ -21,3 +21,52 @@ So, the tea specific things are specific, but everything else can be reused for 
 like coffee or hot chocolate, for example.  
 
 **Example-2 : Payment System** -  
+
+https://www.youtube.com/watch?v=Nrwj3gZiuJU  
+
+Assume, the current only supports payment through credit card, then the below impl. would just work fine.  
+
+![image](https://user-images.githubusercontent.com/26399543/152636614-4752a917-dd83-496f-9fb4-d6af2f5f57ee.png)  
+
+However, the problems may arise when we try to add support for more payment methods, like paypal, paytm, debit card, wallet etc.  
+
+In this case, we need to wrap up our code within switch case or if-elseif ladder structure,  
+and then introduce a new payment method like below:  
+
+![image](https://user-images.githubusercontent.com/26399543/152636782-f657a371-7fb3-4f04-b0b1-7744742b4830.png)  
+
+The above solution will indeed work in short term, but will be very hard to maintain in long term.  
+
+what we just created above is a block of code that is closed for extension and open for modification.  
+because everytime, a change is required (like adding/supporting a new payment method),  
+we're gonna open this method and modify it.  
+and `that violates the open/closed principle of SOLID principles`.  
+
+Additionally, this class handles several functionalities, which violates `Single Responsibility` principle.  
+
+To fix this we need to have a kind of strategy that places each payment method in its own class,  
+making this class resposible for a particular payment method.  
+
+Additionally, these classes should be easily interchangeable or replceable by one another.  
+
+
+`Strategy Design Pattern` defines a family of algorithms, puts each of them in separate class,  
+and make their objects interchangeable,  
+**and to make objects interchangeable, we need to introduce a common interface among them**  
+
+![image](https://user-images.githubusercontent.com/26399543/152637196-4c2e89bc-5223-4d2a-a1ea-226362e08188.png)  
+
+or,  
+
+![image](https://user-images.githubusercontent.com/26399543/152637312-bf7b6eb1-037a-425f-95f6-3564c6530f4d.png)  
+
+now PaymentService.java should be something like this  
+
+![image](https://user-images.githubusercontent.com/26399543/152637337-d1292de1-0a19-47e8-b6e1-3619a758aefc.png)
+
+The above PaymentService class has no visibility on how the payment is being conducted and it should not,  
+because it's making use of the Strategy Interface.  
+
+![image](https://user-images.githubusercontent.com/26399543/152637800-eb363662-7708-4f2c-9c4f-6fa45606f8e3.png)  
+
+
