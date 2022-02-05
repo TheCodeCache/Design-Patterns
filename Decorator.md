@@ -39,3 +39,4 @@ So, `the decorative design pattern facilitates the addition of behaviors to indi
 
 **Facilitates the addition of behaviors to individual objects without inheriting from them**  
 
+Case-1: extending behavior of final class (i.e. inheritance not possible)  
