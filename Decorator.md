@@ -39,7 +39,7 @@ So, `the decorative design pattern facilitates the addition of behaviors to indi
 
 **Facilitates the addition of behaviors to individual objects without inheriting from them**  
 
-**Case-1:** extending behavior of final class (i.e. inheritance not possible)  
+**Case-1:** Extending behavior of final class (i.e. inheritance not possible)  
 
 example: String.java is a final class, can not be inherited.  
 
@@ -79,7 +79,10 @@ class Demo{
 }
 ```
 
-**Case-2:** extending behavior of a non-final class (i.e. inheritance is possible)  
+**Case-2:** Extending behavior of a non-final class (i.e. inheritance is possible)  
+
+The idea here is - a decorator should implement a common interface as the object under decoration,  
+and also compose a reference to the interface.  
 
 ```java
 interface Shape
@@ -186,6 +189,16 @@ class DynamicDecoratorDemo
   }
 }
 ```
+
+**Comparison:**  
+With **Strategy**:  Strategy Pattern selects a single strategy at run time,  
+whereas the need of decorator arises when if we could end up selecting multiple strategy in combination at the same time.  
+
+for ex: a user can make payment using only one method at any given moment in time,  
+be it UPI, credit card, debit card or wallet etc. - **Strategy**  
+
+however, a user can ask for the notification message on either whatsapp or facebook  
+or sms or call or cash, any combination of these - **Decorator**  
 
 **Reference:**  
 1. Udemy
