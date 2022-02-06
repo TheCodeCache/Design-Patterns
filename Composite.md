@@ -1,6 +1,6 @@
 # Composite Design Pattern – 
 
-It allows us to treat a single and a group of objects in uniform manner  
+It allows us `to treat a single and a group of objects in uniform manner`  
 
 **Example-1:**  
 
