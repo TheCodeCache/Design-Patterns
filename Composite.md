@@ -1,4 +1,4 @@
-Composite Design Pattern - 
+# Composite Design Pattern – 
 
 It allows us to treat a single and a group of objects in uniform manner  
 
