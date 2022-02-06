@@ -4,7 +4,8 @@ It allows `adding extra behaviors to entire hierarchies of classes`
 w/o modifying the existing classes and breaking open/closed principle  
 
 **Example:**  
-We've an expression 1 + (2 + 3), we wanna print as well as compute the expression using visitors  
+We've an expression 1 + (2 + 3), we wanna print as well as compute the expression  
+We could use `visitor pattern` to solve this  
 
 ```java
 interface ExpressionVisitor
