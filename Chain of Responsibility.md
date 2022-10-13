@@ -12,7 +12,7 @@ to actually prevent them from processing this particular command query.
 
 **Implementation:**  
 Suppose we're working on authentication app, and for a user to log-in to our platform,  
-he or she must pass several checks.  
+he or she must pass through several checks.  
 
 first we need to make sure that the username entered indeed exists in our server databases.  
 and if not we've to prompt the user and suggest to sign-up  
