@@ -10,7 +10,7 @@ and they can optionally have some sort of default processing implementation.
 And they can also terminate the processing chain and thereby preventing the rest of the objects in the chain  
 to actually prevent them from processing this particular command query.  
 
-**Implmentation:**  
+**Implementation:**  
 Suppose we're working on authentication app, and for a user to log-in to our platform,  
 he or she must pass several checks.  
 
