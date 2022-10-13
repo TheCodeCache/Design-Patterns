@@ -98,6 +98,19 @@ Shape hierarchy and Renderer hierarchy are independent now, just making the abov
 
 This is all about Bridge Pattern.  
 
+# Take-2
+
+Problem that Bridge pattern tries to solve - 
+
+![image](https://user-images.githubusercontent.com/26399543/195515758-a955186c-fef9-4daf-b7ed-1f7e786e8472.png)  
+
+Solution through Bridge pattern - 
+
+![image](https://user-images.githubusercontent.com/26399543/195515894-55cf331f-15bd-496d-b107-dcd9b9aa7aa6.png)  
+
+
 **Reference:**  
 1. Udemy
+2. https://refactoring.guru/design-patterns/bridge
+
 
